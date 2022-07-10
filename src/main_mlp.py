@@ -79,6 +79,8 @@ if __name__ == "__main__":
     args = parse_cmdline_args(parser)
 
     log_out = os.path.join(args.output_path, f"{args.loss_mode}_traininglog.txt")
+    if not os.path.exists(args.output_path):
+        os.mkdir(args.output_path)
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s [%(levelname)s] %(message)s",
@@ -112,7 +114,7 @@ if __name__ == "__main__":
     # Initialize model
     pytorch_model = PyTorchMLP(
         input_size=features.shape[1],
-        hidden_units=(40, 20),
+        hidden_units=(25, 20),
         num_classes=np.bincount(all_test_labels).shape[0],
         loss_mode=args.loss_mode,
     )
@@ -166,8 +168,8 @@ if __name__ == "__main__":
     runtime = (time.time() - start_time) / 60
     logging.info(f"The total runtime was {runtime:.2f} min.")
 
-    logging.info("Validation accuracy:", val_acc)
-    logging.info("Test accuracy:", test_acc)
+    logging.info(f"Validation accuracy: {val_acc}", )
+    logging.info(f"Test accuracy: {test_acc}")
 
     # Make plots
 
