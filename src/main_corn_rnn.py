@@ -88,13 +88,15 @@ if __name__ == "__main__":
 
     csv_path = os.path.join(args.data_path, "tripadvisor_balanced.csv")
 
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
     # Compute performance baselines
     train_loader, valid_loader, test_loader = get_trip_advisor_datasetloaders(
         csv_path=csv_path,
         random_seed=args.random_seed,
         vocab_size=VOCAB_SIZE,
         batch_size=args.batch_size,
-        device="cpu",
+        device=device,
     )
 
     all_test_labels = []

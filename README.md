@@ -7,9 +7,10 @@ cd scipy2022-talk
 conda create -n coral-pytorch python=3.8
 conda activate coral-pytorch
 pip install -r requirements.txt
+python -m spacy download en_core_web_sm
 
 cd src
-python main_rnn.py \
+python main_corn_rnn.py \
 --batch_size 16 \
 --data_path ../datasets/ \
 --learning_rate 0.005 \

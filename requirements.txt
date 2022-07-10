@@ -1,5 +1,5 @@
-torch==1.12
-torchvision==0.13
+torch==1.8.0
+torchvision==0.9
 torchtext==0.9
 lightning==2022.6.15
 pytorch_lightning==1.6.4
