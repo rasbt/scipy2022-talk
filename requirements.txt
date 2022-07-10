@@ -1,0 +1,10 @@
+torch==1.12
+torchvision==0.13
+torchtext==0.9
+lightning==2022.6.15
+pytorch_lightning==1.6.4
+coral_pytorch==1.2
+pre-commit==2.19.0
+watermark==2.3.1
+pandas==1.4.3
+matplotlib==3.0.9
