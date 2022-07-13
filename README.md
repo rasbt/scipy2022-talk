@@ -2,6 +2,10 @@
 
 
 
+**Slides: [https://sebastianraschka.com/pdf/slides/2022-07-scipy-corn.pdf](https://sebastianraschka.com/pdf/slides/2022-07-scipy-corn.pdf)**
+
+
+
 # Using the Code
 
 
