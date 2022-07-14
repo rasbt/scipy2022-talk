@@ -62,6 +62,8 @@ python main_mlp.py \
 
 You can try an interactive version at [https://bit.ly/3aCgSeG](https://bit.ly/3aCgSeG).
 
+(The source code for this interactive demo is available at [https://github.com/rasbt/ord-torchhub/tree/main/app](https://github.com/rasbt/ord-torchhub/tree/main/app).)
+
 
 
 ## References
