@@ -25,22 +25,25 @@ python -m spacy download en_core_web_sm
 
 MLP with CORN loss
 
-```python
+```bash
 cd src
+```
+
+```bash
 python main_mlp.py \
 --batch_size 16 \
 --data_path ../datasets/ \
---learning_rate 0.005 \
+--learning_rate 0.01 \
 --mixed_precision true \
 --num_epochs 40 \
 --num_workers 3 \
 --output_path ./cement_strength \
 --loss_mode corn
-```
+````
 
 MLP with cross entropy loss
 
-```python
+```bash
 python main_mlp.py \
 ...
 --loss_mode crossentropy
